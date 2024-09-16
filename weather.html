@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="weather.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <title>Weather app</title>
+</head>
+
+<body>
+  <main class="mainContainer">
+    <div class="title">
+      <h1>Weather-App</h1>
+    </div>
+
+    <div class="container-fluid container1">
+
+      <div class="search">
+
+        <input type="search" placeholder="Enter city name" id="search">
+        <button type="submit" id="searchbtn"><i class="fas fa-search"></i></button>
+       
+      </div>
+      
+        
+   
+
+      <section class="main">
+        <div class="img">
+          <img src="./images/clouds.png" alt="looks image">
+        </div>
+        <div class="degree">
+          <div class="celsious">
+            <h2>17°C</h2>
+          </div>
+
+          <div class="country">
+            <h3 class="countryFont">Andhra Pradesh</h3>
+          </div>
+
+        </div>
+
+        <div class="footer">
+          <span class="humidity">
+            <span class="image">
+              <img src="./images/humidity.png" alt="humidity image">
+            </span>
+            <span class="para">
+              <p class="mainpara">
+                66%
+              <p>humidity</p>
+              </p>
+
+            </span>
+          </span>
+
+          <span class="windspeed">
+            <span class="image">
+              <img src="./images/wind.png" alt="windspeed image">
+            </span>
+            <span class="para">
+              <p class="mainpara">
+                11 km/h
+              <p>wind</p>
+              </p>
+
+            </span>
+          </span>
+
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="weather.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+
+</html>

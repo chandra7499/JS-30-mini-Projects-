@@ -1,0 +1,357 @@
+:root {
+    background-color: #454545;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-width: 25%;
+
+
+
+
+
+
+
+}
+
+body {
+
+    width: 25%;
+    min-width: 310px;
+    height: 61.05vh;
+    background: linear-gradient(90.9deg, rgb(3, 195, 195) 0.3%, rgb(37, 84, 112) 87.8%);
+    transform: scale(1.3344);
+    border-radius: 25px;
+    overflow:hidden;
+    box-sizing: border-box;
+
+    
+
+
+
+}
+
+
+.container1,.main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 22px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+ 
+   
+   
+   
+
+}
+
+
+
+.title,
+.img,
+.celsious,
+.country,
+.footer {
+    cursor: pointer;
+}
+
+.title,.titlee{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: radial-gradient(circle at 10% 20%, rgba(2, 2, 2, 0.831) 0%, rgb(255, 252, 57) 100.2%);
+    -webkit-background-clip: text;
+    background-size: contain;
+    color: transparent;
+    overflow: hidden;
+
+
+
+
+}
+
+.title>h1{
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    -webkit-text-stroke-width: 2.5px;
+
+}
+
+.img {
+    width: 30%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    transform: scale(1.58);
+    overflow: hidden;
+
+
+}
+
+.img>img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.16);
+
+}
+
+.celsious {
+    width: 100%;
+    height: 5vh;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+
+
+}
+
+.country {
+    width: 100%;
+    height: 5vh;
+    color: rgb(254, 254, 254);
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    overflow: hidden;
+
+}
+
+.countryFont{
+
+    font-size: 20px;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+}
+
+#search {
+    width: 84%;
+    outline: none;
+    outline-width: none;
+
+
+
+
+
+}
+
+
+
+
+#searchbtn {
+    width: 13%;
+    color: rgba(12, 28, 94, 0.751);
+
+}
+
+#search,
+#searchbtn {
+    border: none;
+    padding: 5px;
+    border-radius: 15px;
+
+
+}
+
+.footer {
+
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+
+
+
+
+}
+
+.humidity,
+.windspeed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    color: white;
+
+
+}
+
+.humidity>.image>img,
+.windspeed>.image>img {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transform: scale(0.64);
+}
+
+.degree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.para>p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: scale(0.89);
+}
+
+@media screen and (max-width: 414px) and (min-width:375px) {
+
+    body {
+
+        width: 20%;
+        min-width: 305px;
+
+
+
+
+    }
+
+    .container1 {
+        width: 100%;
+        transform: scale(1);
+
+
+    }
+
+   
+
+
+
+}
+
+@media screen and (max-width:768px) and (min-width:375px) {
+    body {
+
+        width: 30%;
+        transform: scale(1.2);
+
+
+
+
+
+
+    }
+
+   
+
+    .container1 {
+        width: 100%;
+        transform: scale(1);
+        position:relative;
+        top:-29px;
+        
+
+
+
+
+    }
+
+    .search {
+        transform: scale(0.98);
+        margin-top: 30px;
+    }
+}
+
+
+
+@media screen and (max-width:375px) {
+
+    .container1 {
+        width: 100%;
+        transform: scale(0.97);
+
+
+    }
+
+    body {
+        transform: scale(1.2);
+    }
+
+    .title {
+        transform: scale(0.89);
+    }
+
+    .search {
+        margin: 30px;
+        transform: scale(1.2);
+    }
+
+    .footer {
+        margin-left: 0px;
+    }
+
+
+
+
+}
+
+@media screen and (max-width:820){
+
+    .container1 {
+        width: 100%;
+        transform: scale(0.98);
+        
+
+
+
+    }
+
+    body {
+            max-height:200vh;
+        
+        
+    
+    }
+
+    .title {
+        transform: scale(0.89);
+    }
+
+    .search {
+        margin: 0px;
+        transform: scale(1.2);
+    }
+
+    .footer {
+        margin-left: 0px;
+    }
+
+}
