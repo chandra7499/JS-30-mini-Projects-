@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<style>
+    .range,
+    .range2 {
+        -webkit-appearance: none;
+        width: 100%;
+        background-color: #212020ba;
+        border-radius: 5px;
+        height: 5px;
+        margin: 40px 0;
+
+
+    }
+
+    .range::-webkit-slider-thumb,
+    .range2::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        box-shadow: 0px 4px 4px rgba(0, 23, 176, 0.315);
+        border-radius: 50%;
+        background-color: rgb(0, 46, 114);
+        border: 5px solid #fff;
+
+    }
+
+
+
+    .range,
+    .range2 {
+        background: linear-gradient(to right, #1005e5d4 0%, #0b00d21d 0%, #002b81ed 0%);
+    }
+</style>
+
+
+<body
+    class="bg-gray-900 h-[100vh] grid justify-items-center grid-cols-1  items-center  md:h-[100vh] lg:h-[100vh] xl:h-[105vh] overflow-scroll">
+
+
+
+    <div
+        class="containerPlayer w-[100%] bg-white  rounded-md flex justify-evenly   h-auto   scale-[0.99]   sm:h-[auto] lg:h-[auto]  xl:w-[30%] md:w-[49%]  lg:scale-[1] sm:scale-[1] flex-col">
+        <div class="menuBar mt-1 flex justify-between py-2 px-2 scale-[0.9] lg:scale-[1]">
+            <button class="arrowback border-none rounded-full flex justify-center px-2 py-2 items-center"><ion-icon
+                    name="chevron-back-outline" class="text-2xl  text-sky-700"></ion-icon></button>
+            <button class="threebar border-none rounded-full flex justify-center px-2 py-2 items-center"><ion-icon
+                    name="reorder-three-outline" class="text-2xl scale-[1.38] text-sky-700"></ion-icon></button>
+        </div>
+
+
+
+        <div
+            class="sidebar  bg-white rounded-md  h-full w-0 absolute z-10 right-0  transition-all ease-in-out duration-300 ">
+            <div class="cancleContainer flex justify-center items-center   bg-slate-200 border-b-2 border-b-gray-300">
+                <ion-icon name="arrow-back-outline"
+                    class="text-3xl cancle text-sky-800 cursor-pointer transform  rotate-180"></ion-icon>
+                    <p class="para text-center text-2xl overflow-x-hidden flex justify-end mb-2  w-full text-sky-900">Playlist</p>
+            </div>
+
+
+            <div class="list flex flex-col justify-center w-full h-[90%]">
+               
+                <ul class="ullist flex flex-col ml-1 cursor-pointer  overflow-auto lg:h-[100%]"
+                    style="scrollbar-width:none;">
+
+
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div
+            class="thumbnailContainer w-full flex justify-center  flex-col items-center h-auto sm:h-[50%] md:scale-[1] md:w-[100%]">
+            <img src="https://static.vecteezy.com/system/resources/previews/008/653/792/non_2x/music-man-gamer-line-pop-art-potrait-logo-colorful-design-with-dark-background-abstract-illustration-isolated-black-background-for-t-shirt-poster-clothing-merch-apparel-badge-design-vector.jpg"
+                alt="thumbnail"
+                class="w-[305px]  rounded-md scale-[0.97] h-[305px]  thumbnail cursor-pointer"
+                title="Click to change track">
+        </div>
+
+        <div class="songtitle w-full  text-center">
+
+            <p class="songname font-sans  subpixel-antialiased text-2xl">Music</p>
+            <marquee behavior="scroll" direction="left" scrollamount="4"
+                class="artistname font-serif text-gray-400 transition-all ease-linear duration-500 text-xl"></marquee>
+
+        </div>
+
+        <div class="progress w-full  mt-1 scale-[0.89]">
+            <input type="range" value="0" class="w-full range cursor-pointer">
+            <div class="timing w-full flex justify-between">
+                <span class="start font-extralight"></span>
+                <span class="end font-extralight"></span>
+            </div>
+        </div>
+
+        <div class="controlers w-full flex justify-center  gap-2  scale-[1] sm:scale-[1] md:scale-[1] lg:scale-[1]">
+            <button class="backward border-none scale-[0.65]  rounded-[50%]  px-6"
+                style="box-shadow:inset -2px -2px 10px rgba(0, 0, 0, 0.466)"><ion-icon name="play-back-outline"
+                    class="text-4xl text-sky-700" title="-5s back"></ion-icon></button>
+            <button class="play  rounded-full bg-slate-700 flex justify-center mb-3 p-3 scale-[0.86] "
+                style="box-shadow:inset -3px -3px 15px rgba(1,1,1,2.4567)" title="play/pause"><ion-icon
+                    name="play-outline" class="text-5xl text-white iconplay "
+                    style="transition:0.3s ease-in-out;"></ion-icon></button>
+            <button class="forward border-none scale-[0.65] rounded-[50%]  px-6"
+                style="box-shadow:inset -2px -2px 10px #00000077 ;"><ion-icon name="play-forward-outline"
+                    class="text-4xl text-bold  text-sky-700" title="+5s forward"></ion-icon></button>
+        </div>
+
+        <div class="volumeRange  w-full flex justify-end flex-row  h-min items-center mb-4">
+            <div class="flex w-full h-auto px-14 justify-end absolute  ">
+                <input type="range" value="100" class="range2 hidden  cursor-pointer w-min " max="100" min="0">
+            </div>
+            <div class="volume   flex justify-end px-3 w-min h-min">
+                <ion-icon name="volume-high-outline"
+                    class="text-slate-700 text-3xl transition-all ease-linear  cursor-pointer volume2"></ion-icon>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="musicPlayer.js"></script>
+
+</body>
+
+</html>
