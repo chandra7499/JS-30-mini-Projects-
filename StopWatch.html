@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop watch</title>
+
+   
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+  
+
+
+</head>
+
+
+<body class="flex justify-center justify-items-center items-center h-[100vh] bg-no-repeat"
+    Style="background-image:url(https://images.pexels.com/photos/884788/pexels-photo-884788.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);background-size:cover; object-fit: cover;">
+
+    <div
+        class="blurr flex  justify-center items-center    duration-300 container w-[290px] h-[150px] rounded-lg bg-transparent  backdrop-blur-[86px] ">
+        <h1 class="blurhour text-9xl"></h1>
+    </div>
+    <div
+        class="blurr3 flex justify-center  absolute items-center   duration-300 container w-[290px] h-[150px] rounded-lg bg-transparent  backdrop-blur-[86px] ">
+        <h1 class="blursec text-9xl"></h1>
+    </div>
+    <div
+        class="blurr2 flex   justify-center  absolute  items-center  duration-300 container w-[290px]  h-[150px] rounded-lg bg-transparent  backdrop-blur-[86px] ">
+        <h1 class="blurminute text-9xl"></h1>
+    </div>
+
+
+    <div
+        class="TimeContainer   absolute z-10 bg-black w-[270px] h-[140px] rounded-xl opacity-60 hover:translate-x-7  hover:translate-y-5 cursor-pointer hover:scale-[1.1] duration-300">
+        <div class="elements flex justify-center h-[100%] flex-col">
+            <div class="Time text-white flex flex-row gap-2 justify-center h-[100%] items-center font-sans text-3xl">
+                <span class="hours">00 </span><span>:</span>
+                <span class="minutes">00 </span><span>:</span>
+                <span class="seconds">00</span>
+            </div>
+
+            <div
+                class="controls w-auto  overflow-hidden h-[100%] flex justify-center  transition ease-linear duration-500  px-2 py-1">
+                <button class="start"><ion-icon name="play-outline"
+                        class="text-black bg-white  text-[40px] ring-2 ring-white p-1 z-10 rounded-full"
+                        style="box-shadow:inset -5px -7px 5px rgba(112, 112, 112, 0.947)"></ion-icon></button>
+                <button class="reset"><ion-icon name="refresh-outline"
+                        class="text-black bg-white  text-[40px] ring-2 ring-white p-1 hidden rounded-full"
+                        style="box-shadow:inset -5px -7px 5px rgba(112, 112, 112, 0.947)"></ion-icon></button>
+            </div>
+
+        </div>
+    </div>
+    <div
+        class="setTimmer absolute w-auto flex flex-row rounded-full scale-[1.2] h-auto bottom-5  transition-all ease-linear duration-300">
+        <button class="setTimer px-3 bg-slate-300  transition-all ease-linear duration-300 scale-[1] rounded-xl">Set
+            Timer</button>
+        <button class="resett px-3 bg-slate-300 rounded-full hidden  h-10 ">Pause</button>
+    </div>
+
+
+    <div class="popUpTimeRequest absolute z-10 w-[360px]  ring-2 ring-transparent  rounded-xl   flex justify-center  overflow-auto "
+        style=" backdrop-filter: blur(40px); box-shadow: inset 1.5px -3.5px 19px rgba(235, 235, 235, 0.467);">
+        <div class="container w-min flex py-1 absolute left-10 justify-start flex-col gap-5">
+            <label for="hours" class="text-white">Hours:
+                <input type="number" id="hours" min="0" max="23" value="00"
+                    class="w-[200px] h-[40px] rounded-lg outline-none bg-slate-900 text-white"></label>
+            <label for="seconds" class="text-white">Minutes:
+                <input type="number" id="seconds" max="60" min="0" value="00"
+                    class="w-[200px] h-[40px] rounded-lg outline-none bg-slate-900 text-white"></label>
+            <label for="minutes" class="text-slate-50">Seconds:
+                <input type="number" id="minutes" max="60" min="0" value="00"
+                    class="w-[200px] h-[40px] rounded-lg outline-none bg-slate-900 text-white"></label>
+        </div>
+        <div class="btn">
+            <button
+                class="settime h-min absolute bottom-7 right-3 ring-slate-900 bg-slate-200 rounded-lg text-slate-900 font-semibold px-7 ring-1">start</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="StopWatch.js"></script>
+
+</body>
+
+</html>
